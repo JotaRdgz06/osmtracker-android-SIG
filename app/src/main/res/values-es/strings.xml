@@ -4,6 +4,9 @@
   <string name="app_name">OSMTracker para Android™</string>
   <string name="app_short_name">OSMTracker</string>
   <string name="app_description">Inspirado por OSMTracker en Windows Mobile, que permite realizar un seguimiento de sus viajes, marcar puntos de paso importantes (grabación de voz, fotos), exportarlos en formato GPX para su uso posterior con herramientas OpenStreetMap como JOSM.</string>
+  <!--Mapping mode-->
+  <string name="mapping_mode_conventional">Mapeo convencional</string>
+  <string name="mapping_mode_package">Mapeo por paquetes</string>  
   <!--TrackLogger-->
   <string name="tracklogger">Grabadora de trazas</string>
   <string name="tracklogger_waiting_gps">Esperando la señal de GPS para habilitar los botones…</string>
