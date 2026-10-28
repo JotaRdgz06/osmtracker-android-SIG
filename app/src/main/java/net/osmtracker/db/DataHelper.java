@@ -262,6 +262,14 @@ public class DataHelper {
 			contentResolver.insert(Uri.withAppendedPath(trackUri, TrackContentProvider.Schema.TBL_WAYPOINT + "s"), values);
 		}
 	}
+	/*
+	Aqui se crearía un nuevo metodo llamado savePackage que se encargaría de guardar todos los datos en un paquete reciviendo 
+		varios datos dentro de un solo waypoint
+	¿Por qué un nuevo metodo? Porque así se le da la posibilidad a los usuarios la capacidad de elegir el metodo que mas les convenga
+		o les resulte mas cómodos, si prefieren utilizar el OMS Tracker como siempre podrían hacerlo sin verce obligados a utilizar las 
+		otras opciones.
+	Este nuevo metedo recibiría una lista con todos los datos por lo que el en un solo punto/waypoint se guardaría todos los datos.
+	*/
 	
 	/**
 	 * Updates a waypoint
@@ -275,6 +283,7 @@ public class DataHelper {
 	 * @param link
 	 *				New link
 	 */
+
 	public void updateWayPoint(long trackId, String uuid, String name, String link) {
 		Log.v(TAG, "Updating waypoint with uuid '" + uuid + "'. New values: name='" + name + "', link='" + link + "'");
 		if (uuid != null) {
