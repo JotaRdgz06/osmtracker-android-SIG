@@ -14,6 +14,9 @@ public class OSMTracker {
 	 * See preferences.xml for layout, strings-preferences.xml for text.
 	 */
 	public static final class Preferences {
+		/*
+		Aquí se declararían cada de las variables gloales de los intents aparte de declararse el Package 
+		*/
 		// Property names
 		public final static String KEY_STORAGE_DIR = "logging.storage.dir";
 		public final static String KEY_VOICEREC_DURATION = "voicerec.duration";
