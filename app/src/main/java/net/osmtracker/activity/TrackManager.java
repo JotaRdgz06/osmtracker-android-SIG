@@ -231,6 +231,16 @@ public class TrackManager extends AppCompatActivity
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
+			/* Selector de modo de mapeo:
+			Antes de llamar a startTrackLoggerForNewTrack() y de que aparezcan los botones para mapear se muestra una pantalla negra con dos botones, 
+			uno con el texto "Mapeo convencional" y otro con el texto "Mapeo por paquetes", esto funciona como una bandera,
+			se crea la variable "packageMode" y si se selecciona la primera opción se le asigna False, si se selecciona la segunda
+			se le asigna True. El mapeo convencional es para las personas que están acostumbradas a usar el metodo actual de mapeo
+			con cada waypoint separado de los demás, mientras que el mapeo por paquetes es para las personas que quieran relacionar
+			ya sea una foto, una nota de audio o una nota de texto con la ubicación donde se está creando el waypoint para mayor
+			organización, juntandolas en un solo waypoint. Luego de seleccionar una de las dos opciones comienza instantaneamente el mapeo,
+			si se cierra el menú si elegir alguna de las opciones no se crea el track.
+			*/
 			case R.id.trackmgr_menu_newtrack:
 				startTrackLoggerForNewTrack();
 				break;
@@ -323,6 +333,7 @@ public class TrackManager extends AppCompatActivity
 	 */
 	private void startTrackLoggerForNewTrack(){
 		// Start track logger activity
+		// Aquí la funcion recibe packageMode para decidir qué tipo de mapeo se hace.
 		try {
 			Intent i = new Intent(this, TrackLogger.class);
 			// New track
