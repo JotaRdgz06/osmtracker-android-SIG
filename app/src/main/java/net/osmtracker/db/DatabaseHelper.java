@@ -55,6 +55,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	/**
 	 * SQL for creating table WAYPOINT
 	 */
+	/*
+	Aqui es donde se debe de crear la base de datos que contenga toda los Packages
+	Además de que se deberia de crear un onUpgrade
+	*/
+	
 	private static final String SQL_CREATE_TABLE_WAYPOINT = ""
 		+ "create table " + TrackContentProvider.Schema.TBL_WAYPOINT + " ("
 		+ TrackContentProvider.Schema.COL_ID + " integer primary key autoincrement,"
